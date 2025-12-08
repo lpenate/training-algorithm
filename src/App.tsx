@@ -17,7 +17,7 @@ type SearchingAlgorithm = 'linear' | 'binary';
 
 function App() {
   const [mode, setMode] = useState<AlgorithmMode>('stack');
-  const [steps, setSteps] = useState<Step[]>([]);
+  const [steps, setSteps] = useState<Step<number | string>[]>([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1000);
@@ -69,6 +69,11 @@ function App() {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
     }
+  };
+
+  const handleGoToStep = (step: number) => {
+    setCurrentStep(step);
+    setIsPlaying(false);
   };
 
   const handlePlay = () => {
@@ -276,6 +281,7 @@ function App() {
                 onStepForward={handleStepForward}
                 onStepBackward={handleStepBackward}
                 onReset={handleReset}
+                onGoToStep={handleGoToStep}
                 speed={speed}
                 onSpeedChange={setSpeed}
               />
@@ -317,6 +323,7 @@ function App() {
                 onStepForward={handleStepForward}
                 onStepBackward={handleStepBackward}
                 onReset={handleReset}
+                onGoToStep={handleGoToStep}
                 speed={speed}
                 onSpeedChange={setSpeed}
               />
@@ -347,8 +354,8 @@ function App() {
               </div>
             )}
             <div className="visualization">
-              {currentStepData && currentStepData.data && (
-                <ArrayVisualizer data={currentStepData.data} highlights={currentStepData.highlights} type="bars" />
+              {currentStepData && currentStepData.data && Array.isArray(currentStepData.data) && typeof currentStepData.data[0] === 'number' && (
+                <ArrayVisualizer data={currentStepData.data as number[]} highlights={currentStepData.highlights} type="bars" />
               )}
             </div>
             {currentStepData && (
@@ -366,6 +373,7 @@ function App() {
                 onStepForward={handleStepForward}
                 onStepBackward={handleStepBackward}
                 onReset={handleReset}
+                onGoToStep={handleGoToStep}
                 speed={speed}
                 onSpeedChange={setSpeed}
               />
@@ -395,8 +403,8 @@ function App() {
               </div>
             )}
             <div className="visualization">
-              {currentStepData && currentStepData.data && (
-                <ArrayVisualizer data={currentStepData.data} highlights={currentStepData.highlights} type="boxes" />
+              {currentStepData && currentStepData.data && Array.isArray(currentStepData.data) && typeof currentStepData.data[0] === 'number' && (
+                <ArrayVisualizer data={currentStepData.data as number[]} highlights={currentStepData.highlights} type="boxes" />
               )}
             </div>
             {currentStepData && (
@@ -414,6 +422,7 @@ function App() {
                 onStepForward={handleStepForward}
                 onStepBackward={handleStepBackward}
                 onReset={handleReset}
+                onGoToStep={handleGoToStep}
                 speed={speed}
                 onSpeedChange={setSpeed}
               />

@@ -1,8 +1,8 @@
 import type { Step } from '../types';
 
-export class Queue<T> {
+export class Queue<T extends number | string> {
   private items: T[] = [];
-  private steps: Step[] = [];
+  private steps: Step<T>[] = [];
   private stepId = 0;
 
   enqueue(item: T): void {
@@ -52,7 +52,7 @@ export class Queue<T> {
     return [...this.items];
   }
 
-  getSteps(): Step[] {
+  getSteps(): Step<T>[] {
     return this.steps;
   }
 

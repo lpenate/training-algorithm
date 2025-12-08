@@ -1,7 +1,7 @@
 import type { Step } from '../types';
 
-export function bubbleSort(arr: number[]): Step[] {
-  const steps: Step[] = [];
+export function bubbleSort(arr: number[]): Step<number>[] {
+  const steps: Step<number>[] = [];
   const array = [...arr];
   let stepId = 0;
 
@@ -44,8 +44,8 @@ export function bubbleSort(arr: number[]): Step[] {
   return steps;
 }
 
-export function quickSort(arr: number[]): Step[] {
-  const steps: Step[] = [];
+export function quickSort(arr: number[]): Step<number>[] {
+  const steps: Step<number>[] = [];
   const array = [...arr];
   let stepId = 0;
 
@@ -118,8 +118,8 @@ export function quickSort(arr: number[]): Step[] {
   return steps;
 }
 
-export function mergeSort(arr: number[]): Step[] {
-  const steps: Step[] = [];
+export function mergeSort(arr: number[]): Step<number>[] {
+  const steps: Step<number>[] = [];
   const array = [...arr];
   let stepId = 0;
 

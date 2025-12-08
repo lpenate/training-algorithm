@@ -1,7 +1,7 @@
 import type { Step } from '../types';
 
-export function linearSearch(arr: number[], target: number): Step[] {
-  const steps: Step[] = [];
+export function linearSearch(arr: number[], target: number): Step<number>[] {
+  const steps: Step<number>[] = [];
   const array = [...arr];
   let stepId = 0;
 
@@ -41,8 +41,8 @@ export function linearSearch(arr: number[], target: number): Step[] {
   return steps;
 }
 
-export function binarySearch(arr: number[], target: number): Step[] {
-  const steps: Step[] = [];
+export function binarySearch(arr: number[], target: number): Step<number>[] {
+  const steps: Step<number>[] = [];
   const array = [...arr].sort((a, b) => a - b); // Binary search requires sorted array
   let stepId = 0;
 

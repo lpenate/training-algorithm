@@ -10,6 +10,7 @@ interface StepControlsProps {
   onStepForward: () => void;
   onStepBackward: () => void;
   onReset: () => void;
+  onGoToStep: (step: number) => void;
   speed: number;
   onSpeedChange: (speed: number) => void;
 }
@@ -23,6 +24,7 @@ const StepControls: React.FC<StepControlsProps> = ({
   onStepForward,
   onStepBackward,
   onReset,
+  onGoToStep,
   speed,
   onSpeedChange,
 }) => {
@@ -73,15 +75,7 @@ const StepControls: React.FC<StepControlsProps> = ({
           min="0"
           max={totalSteps - 1}
           value={currentStep}
-          onChange={(e) => {
-            const step = parseInt(e.target.value);
-            if (step !== currentStep) {
-              onReset();
-              for (let i = 0; i < step; i++) {
-                onStepForward();
-              }
-            }
-          }}
+          onChange={(e) => onGoToStep(parseInt(e.target.value))}
           className="progress-slider"
         />
       </div>

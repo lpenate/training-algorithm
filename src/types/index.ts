@@ -1,7 +1,7 @@
-export interface Step {
+export interface Step<T = number | string> {
   id: number;
   description: string;
-  data: number[] | string[];
+  data: T[];
   highlights?: number[];
 }
 

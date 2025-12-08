@@ -1,8 +1,8 @@
 import type { Step } from '../types';
 
-export class Stack<T> {
+export class Stack<T extends number | string> {
   private items: T[] = [];
-  private steps: Step[] = [];
+  private steps: Step<T>[] = [];
   private stepId = 0;
 
   push(item: T): void {
@@ -52,7 +52,7 @@ export class Stack<T> {
     return [...this.items];
   }
 
-  getSteps(): Step[] {
+  getSteps(): Step<T>[] {
     return this.steps;
   }
 
