@@ -13,7 +13,7 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "complexity"],
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
   "rules": {
     "complexity": ["error", 10],
     "max-lines-per-function": [
