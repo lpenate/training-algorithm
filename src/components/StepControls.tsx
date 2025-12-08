@@ -1,6 +1,11 @@
 import React from 'react';
 import './StepControls.css';
 
+const MAX_SPEED_VALUE = 2100;
+const MIN_SPEED = 100;
+const MAX_SPEED = 2000;
+const SPEED_STEP = 100;
+
 interface StepControlsProps {
   currentStep: number;
   totalSteps: number;
@@ -83,14 +88,14 @@ const StepControls: React.FC<StepControlsProps> = ({
         <label>Speed:</label>
         <input
           type="range"
-          min="100"
-          max="2000"
-          step="100"
-          value={2100 - speed}
-          onChange={(e) => onSpeedChange(2100 - parseInt(e.target.value))}
+          min={MIN_SPEED}
+          max={MAX_SPEED}
+          step={SPEED_STEP}
+          value={MAX_SPEED_VALUE - speed}
+          onChange={(e) => onSpeedChange(MAX_SPEED_VALUE - parseInt(e.target.value))}
           className="speed-slider"
         />
-        <span>{((2100 - speed) / 100).toFixed(0)}x</span>
+        <span>{((MAX_SPEED_VALUE - speed) / 100).toFixed(0)}x</span>
       </div>
     </div>
   );

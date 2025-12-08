@@ -30,15 +30,3 @@ export function generateRandomString(length: number): string {
 export function generateRandomStringArray(count: number, minLength: number = 3, maxLength: number = 10): string[] {
   return Array.from({ length: count }, () => generateRandomString(randomInt(minLength, maxLength)));
 }
-
-/**
- * Shuffle an array in place
- */
-export function shuffleArray<T>(array: T[]): T[] {
-  const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = randomInt(0, i);
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
-}
