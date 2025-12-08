@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,25 +15,137 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    135deg,
+    #667eea 0%,
+    #764ba2 25%,
+    #f093fb 50%,
+    #4facfe 75%,
+    #00f2fe 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #1a1a2e;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: polygon(0% 0%, 100% 0%, 85% 15%, 100% 30%, 0% 20%),
+    polygon(100% 100%, 0% 100%, 15% 85%, 0% 70%, 100% 80%);
+  background-size: 100% 100%;
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 107, 0.3) 0%,
+    rgba(255, 159, 64, 0.3) 100%
+  );
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  transform: rotate(45deg);
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(45deg) translate(-30px, -30px);
+  }
+}
+
+/* Monument Valley Text Styles */
+.monument-title {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-shadow:
+    4px 4px 0px rgba(0, 0, 0, 0.3),
+    8px 8px 0px rgba(0, 0, 0, 0.2),
+    12px 12px 0px rgba(0, 0, 0, 0.1),
+    0 0 20px rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  line-height: 1.1;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.monument-subtitle {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-shadow:
+    2px 2px 0px rgba(0, 0, 0, 0.4),
+    4px 4px 0px rgba(0, 0, 0, 0.2),
+    0 0 10px rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+
+.monument-text {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.3),
+    2px 2px 0px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+.monument-label {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.4),
+    2px 2px 0px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-size: 0.75em;
+}
+
+.monument-description {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-shadow:
+    1px 1px 0px rgba(0, 0, 0, 0.2),
+    0 0 5px rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  line-height: 1.6;
 }

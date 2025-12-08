@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "name": "Binary Search",
+    "category": "Search",
+    "difficulty": "Easy",
+    "description": "Efficiently search for an element in a sorted array by repeatedly dividing the search interval in half.",
+    "color": "from-pink-500 to-rose-500"
+  },
+  {
+    "id": "2",
+    "name": "Quick Sort",
+    "category": "Sorting",
+    "difficulty": "Medium",
+    "description": "Divide and conquer algorithm that picks a pivot and partitions the array around it.",
+    "color": "from-purple-500 to-indigo-500"
+  },
+  {
+    "id": "3",
+    "name": "Merge Sort",
+    "category": "Sorting",
+    "difficulty": "Medium",
+    "description": "Divide and conquer algorithm that divides the array into halves and merges them in sorted order.",
+    "color": "from-blue-500 to-cyan-500"
+  },
+  {
+    "id": "4",
+    "name": "Breadth-First Search (BFS)",
+    "category": "Graph",
+    "difficulty": "Medium",
+    "description": "Traverse a graph level by level, exploring all neighbors before moving to the next level.",
+    "color": "from-green-500 to-emerald-500"
+  },
+  {
+    "id": "5",
+    "name": "Depth-First Search (DFS)",
+    "category": "Graph",
+    "difficulty": "Medium",
+    "description": "Traverse a graph by going as deep as possible before backtracking.",
+    "color": "from-yellow-500 to-orange-500"
+  },
+  {
+    "id": "6",
+    "name": "Dijkstra's Algorithm",
+    "category": "Graph",
+    "difficulty": "Hard",
+    "description": "Find the shortest path from a source vertex to all other vertices in a weighted graph.",
+    "color": "from-red-500 to-pink-500"
+  },
+  {
+    "id": "7",
+    "name": "Two Pointers",
+    "category": "Array",
+    "difficulty": "Easy",
+    "description": "Use two pointers to traverse an array from different positions simultaneously.",
+    "color": "from-violet-500 to-purple-500"
+  },
+  {
+    "id": "8",
+    "name": "Sliding Window",
+    "category": "Array",
+    "difficulty": "Medium",
+    "description": "Maintain a window of elements and slide it across the array to solve subarray problems.",
+    "color": "from-teal-500 to-cyan-500"
+  },
+  {
+    "id": "9",
+    "name": "Dynamic Programming",
+    "category": "Optimization",
+    "difficulty": "Hard",
+    "description": "Solve complex problems by breaking them down into simpler subproblems and storing results.",
+    "color": "from-amber-500 to-yellow-500"
+  },
+  {
+    "id": "10",
+    "name": "Hash Table",
+    "category": "Data Structure",
+    "difficulty": "Easy",
+    "description": "Store key-value pairs for O(1) average time complexity for insert, delete, and lookup operations.",
+    "color": "from-fuchsia-500 to-pink-500"
+  },
+  {
+    "id": "11",
+    "name": "Binary Tree Traversal",
+    "category": "Tree",
+    "difficulty": "Medium",
+    "description": "Traverse binary trees using inorder, preorder, or postorder traversal methods.",
+    "color": "from-indigo-500 to-blue-500"
+  },
+  {
+    "id": "12",
+    "name": "Backtracking",
+    "category": "Recursion",
+    "difficulty": "Hard",
+    "description": "Build solutions incrementally and abandon partial solutions that cannot lead to valid solutions.",
+    "color": "from-rose-500 to-red-500"
+  }
+]

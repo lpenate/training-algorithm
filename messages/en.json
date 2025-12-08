@@ -1,0 +1,97 @@
+{
+  "common": {
+    "title": "Training Algorithm",
+    "subtitle": "Master the most commonly used algorithms in computer science"
+  },
+  "filters": {
+    "filterByType": "Filter by Type:",
+    "filterByDifficulty": "Filter by Difficulty:",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard"
+  },
+  "algorithm": {
+    "level": "Level",
+    "levelEasy": "Level: Easy",
+    "levelMedium": "Level: Medium",
+    "levelHard": "Level: Hard",
+    "levelUnknown": "Level: Unknown",
+    "type": "Type:",
+    "description": "Description:"
+  },
+  "messages": {
+    "noResults": "No algorithms found with the selected filters."
+  },
+  "algorithms": {
+    "1": {
+      "name": "Binary Search",
+      "category": "Search",
+      "description": "Efficiently search for an element in a sorted array by repeatedly dividing the search interval in half."
+    },
+    "2": {
+      "name": "Quick Sort",
+      "category": "Sorting",
+      "description": "Divide and conquer algorithm that picks a pivot and partitions the array around it."
+    },
+    "3": {
+      "name": "Merge Sort",
+      "category": "Sorting",
+      "description": "Divide and conquer algorithm that divides the array into halves and merges them in sorted order."
+    },
+    "4": {
+      "name": "Breadth-First Search (BFS)",
+      "category": "Graph",
+      "description": "Traverse a graph level by level, exploring all neighbors before moving to the next level."
+    },
+    "5": {
+      "name": "Depth-First Search (DFS)",
+      "category": "Graph",
+      "description": "Traverse a graph by going as deep as possible before backtracking."
+    },
+    "6": {
+      "name": "Dijkstra's Algorithm",
+      "category": "Graph",
+      "description": "Find the shortest path from a source vertex to all other vertices in a weighted graph."
+    },
+    "7": {
+      "name": "Two Pointers",
+      "category": "Array",
+      "description": "Use two pointers to traverse an array from different positions simultaneously."
+    },
+    "8": {
+      "name": "Sliding Window",
+      "category": "Array",
+      "description": "Maintain a window of elements and slide it across the array to solve subarray problems."
+    },
+    "9": {
+      "name": "Dynamic Programming",
+      "category": "Optimization",
+      "description": "Solve complex problems by breaking them down into simpler subproblems and storing results."
+    },
+    "10": {
+      "name": "Hash Table",
+      "category": "Data Structure",
+      "description": "Store key-value pairs for O(1) average time complexity for insert, delete, and lookup operations."
+    },
+    "11": {
+      "name": "Binary Tree Traversal",
+      "category": "Tree",
+      "description": "Traverse binary trees using inorder, preorder, or postorder traversal methods."
+    },
+    "12": {
+      "name": "Backtracking",
+      "category": "Recursion",
+      "description": "Build solutions incrementally and abandon partial solutions that cannot lead to valid solutions."
+    }
+  },
+  "categories": {
+    "Search": "Search",
+    "Sorting": "Sorting",
+    "Graph": "Graph",
+    "Array": "Array",
+    "Optimization": "Optimization",
+    "Data Structure": "Data Structure",
+    "Tree": "Tree",
+    "Recursion": "Recursion"
+  }
+}
