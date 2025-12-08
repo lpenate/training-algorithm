@@ -1,0 +1,97 @@
+{
+  "common": {
+    "title": "Training Algorithm",
+    "subtitle": "Domina los algoritmos más utilizados en ciencias de la computación"
+  },
+  "filters": {
+    "filterByType": "Filtrar por Tipo:",
+    "filterByDifficulty": "Filtrar por Dificultad:",
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Avanzado"
+  },
+  "algorithm": {
+    "level": "Nivel",
+    "levelEasy": "Nivel: Fácil",
+    "levelMedium": "Nivel: Medio",
+    "levelHard": "Nivel: Avanzado",
+    "levelUnknown": "Nivel: Desconocido",
+    "type": "Tipo:",
+    "description": "Descripción:"
+  },
+  "messages": {
+    "noResults": "No se encontraron algoritmos con los filtros seleccionados."
+  },
+  "algorithms": {
+    "1": {
+      "name": "Búsqueda Binaria",
+      "category": "Búsqueda",
+      "description": "Busca eficientemente un elemento en un array ordenado dividiendo repetidamente el intervalo de búsqueda por la mitad."
+    },
+    "2": {
+      "name": "Quick Sort",
+      "category": "Ordenamiento",
+      "description": "Algoritmo divide y vencerás que elige un pivote y particiona el array alrededor de él."
+    },
+    "3": {
+      "name": "Merge Sort",
+      "category": "Ordenamiento",
+      "description": "Algoritmo divide y vencerás que divide el array en mitades y las fusiona en orden."
+    },
+    "4": {
+      "name": "Búsqueda en Amplitud (BFS)",
+      "category": "Grafos",
+      "description": "Recorre un grafo nivel por nivel, explorando todos los vecinos antes de pasar al siguiente nivel."
+    },
+    "5": {
+      "name": "Búsqueda en Profundidad (DFS)",
+      "category": "Grafos",
+      "description": "Recorre un grafo yendo lo más profundo posible antes de retroceder."
+    },
+    "6": {
+      "name": "Algoritmo de Dijkstra",
+      "category": "Grafos",
+      "description": "Encuentra el camino más corto desde un vértice fuente a todos los demás vértices en un grafo ponderado."
+    },
+    "7": {
+      "name": "Dos Punteros",
+      "category": "Arrays",
+      "description": "Usa dos punteros para recorrer un array desde diferentes posiciones simultáneamente."
+    },
+    "8": {
+      "name": "Ventana Deslizante",
+      "category": "Arrays",
+      "description": "Mantiene una ventana de elementos y la desliza a través del array para resolver problemas de subarrays."
+    },
+    "9": {
+      "name": "Programación Dinámica",
+      "category": "Optimización",
+      "description": "Resuelve problemas complejos dividiéndolos en subproblemas más simples y almacenando resultados."
+    },
+    "10": {
+      "name": "Tabla Hash",
+      "category": "Estructura de Datos",
+      "description": "Almacena pares clave-valor para complejidad temporal O(1) promedio en operaciones de inserción, eliminación y búsqueda."
+    },
+    "11": {
+      "name": "Recorrido de Árbol Binario",
+      "category": "Árboles",
+      "description": "Recorre árboles binarios usando métodos de recorrido inorder, preorder o postorder."
+    },
+    "12": {
+      "name": "Retroceso",
+      "category": "Recursión",
+      "description": "Construye soluciones incrementalmente y abandona soluciones parciales que no pueden llevar a soluciones válidas."
+    }
+  },
+  "categories": {
+    "Search": "Búsqueda",
+    "Sorting": "Ordenamiento",
+    "Graph": "Grafos",
+    "Array": "Arrays",
+    "Optimization": "Optimización",
+    "Data Structure": "Estructura de Datos",
+    "Tree": "Árboles",
+    "Recursion": "Recursión"
+  }
+}
