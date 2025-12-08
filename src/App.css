@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  min-height: 100vh;
+  color: white;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-header {
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+  background: rgba(26, 26, 46, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.app-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #00d4ff 0%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-header p {
+  color: #aaa;
+  font-size: 1.1em;
+}
+
+.mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.mode-selector button {
+  background: rgba(45, 45, 68, 0.8);
+  border: 2px solid #00d4ff;
+  border-radius: 8px;
+  padding: 15px 30px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.mode-selector button:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
+}
+
+.mode-selector button.active {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border-color: #00d4ff;
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+}
+
+.content {
+  background: rgba(26, 26, 46, 0.6);
+  border-radius: 12px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.algorithm-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  color: #00d4ff;
+}
+
+.input-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.input-controls input,
+.input-controls select {
+  padding: 12px 20px;
+  border: 2px solid #00d4ff;
+  border-radius: 6px;
+  background: rgba(45, 45, 68, 0.8);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  min-width: 200px;
+}
+
+.input-controls input:focus,
+.input-controls select:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.input-controls button {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-controls button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 212, 255, 0.4);
+}
+
+.input-controls button:disabled {
+  background: #2d2d44;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.visualization {
+  margin: 30px 0;
+}
+
+.step-description {
+  background: rgba(45, 45, 68, 0.8);
+  border-left: 4px solid #00d4ff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+.array-display {
+  background: rgba(45, 45, 68, 0.8);
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.array-display strong {
+  color: #00d4ff;
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 1.8em;
+  }
+
+  .mode-selector {
+    gap: 10px;
+  }
+
+  .mode-selector button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .input-controls {
+    flex-direction: column;
+  }
+
+  .input-controls input,
+  .input-controls select,
+  .input-controls button {
+    width: 100%;
+  }
+}
+

@@ -1,0 +1,67 @@
+.queue-visualizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background: #1a1a2e;
+  border-radius: 8px;
+  min-height: 150px;
+}
+
+.queue-container {
+  display: flex;
+  gap: 8px;
+  padding: 20px;
+  background: #2d2d44;
+  border-radius: 8px;
+  min-width: 300px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.queue-item {
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border: 2px solid #00a8cc;
+  border-radius: 8px;
+  padding: 15px 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  min-width: 60px;
+}
+
+.queue-item.highlight {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  border-color: #ff6b6b;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(255, 107, 107, 0.5);
+}
+
+.item-value {
+  display: inline-block;
+}
+
+.queue-label {
+  color: #00d4ff;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.queue-label.front {
+  margin-right: 10px;
+}
+
+.queue-label.rear {
+  margin-left: 10px;
+}
+
+.empty-message {
+  color: #888;
+  font-style: italic;
+  padding: 20px;
+}
