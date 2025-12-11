@@ -27,14 +27,23 @@ export default function Home() {
   );
 
   const algorithms = useMemo(() => {
-    return baseAlgorithms.map(alg => ({
-      id: alg.id,
-      name: t(`algorithms.${alg.id}.name`),
-      category: t(`categories.${alg.category}`),
-      difficulty: alg.difficulty,
-      description: t(`algorithms.${alg.id}.description`),
-      color: alg.color,
-    }));
+    return baseAlgorithms
+      .map(alg => {
+        try {
+          return {
+            id: alg.id,
+            name: t(`algorithms.${alg.id}.name`),
+            category: t(`categories.${alg.category}`),
+            difficulty: alg.difficulty,
+            description: t(`algorithms.${alg.id}.description`),
+            color: alg.color,
+          };
+        } catch (error) {
+          console.error(`Error loading algorithm ${alg.id}:`, error);
+          return null;
+        }
+      })
+      .filter((alg): alg is NonNullable<typeof alg> => alg !== null);
   }, [t]);
 
   const categories = useMemo(() => {

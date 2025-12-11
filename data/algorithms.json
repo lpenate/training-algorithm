@@ -5,7 +5,8 @@
     "category": "Search",
     "difficulty": "Easy",
     "description": "Efficiently search for an element in a sorted array by repeatedly dividing the search interval in half.",
-    "color": "from-pink-500 to-rose-500"
+    "color": "from-pink-500 to-rose-500",
+    "alternativeId": null
   },
   {
     "id": "2",
@@ -13,7 +14,8 @@
     "category": "Sorting",
     "difficulty": "Medium",
     "description": "Divide and conquer algorithm that picks a pivot and partitions the array around it.",
-    "color": "from-purple-500 to-indigo-500"
+    "color": "from-purple-500 to-indigo-500",
+    "alternativeId": "3"
   },
   {
     "id": "3",
@@ -21,7 +23,8 @@
     "category": "Sorting",
     "difficulty": "Medium",
     "description": "Divide and conquer algorithm that divides the array into halves and merges them in sorted order.",
-    "color": "from-blue-500 to-cyan-500"
+    "color": "from-blue-500 to-cyan-500",
+    "alternativeId": "2"
   },
   {
     "id": "4",
@@ -29,7 +32,8 @@
     "category": "Graph",
     "difficulty": "Medium",
     "description": "Traverse a graph level by level, exploring all neighbors before moving to the next level.",
-    "color": "from-green-500 to-emerald-500"
+    "color": "from-green-500 to-emerald-500",
+    "alternativeId": "5"
   },
   {
     "id": "5",
@@ -37,7 +41,8 @@
     "category": "Graph",
     "difficulty": "Medium",
     "description": "Traverse a graph by going as deep as possible before backtracking.",
-    "color": "from-yellow-500 to-orange-500"
+    "color": "from-yellow-500 to-orange-500",
+    "alternativeId": "4"
   },
   {
     "id": "6",
@@ -45,7 +50,8 @@
     "category": "Graph",
     "difficulty": "Hard",
     "description": "Find the shortest path from a source vertex to all other vertices in a weighted graph.",
-    "color": "from-red-500 to-pink-500"
+    "color": "from-red-500 to-pink-500",
+    "alternativeId": null
   },
   {
     "id": "7",
@@ -53,7 +59,8 @@
     "category": "Array",
     "difficulty": "Easy",
     "description": "Use two pointers to traverse an array from different positions simultaneously.",
-    "color": "from-violet-500 to-purple-500"
+    "color": "from-violet-500 to-purple-500",
+    "alternativeId": "8"
   },
   {
     "id": "8",
@@ -61,7 +68,8 @@
     "category": "Array",
     "difficulty": "Medium",
     "description": "Maintain a window of elements and slide it across the array to solve subarray problems.",
-    "color": "from-teal-500 to-cyan-500"
+    "color": "from-teal-500 to-cyan-500",
+    "alternativeId": "7"
   },
   {
     "id": "9",
@@ -69,7 +77,8 @@
     "category": "Optimization",
     "difficulty": "Hard",
     "description": "Solve complex problems by breaking them down into simpler subproblems and storing results.",
-    "color": "from-amber-500 to-yellow-500"
+    "color": "from-amber-500 to-yellow-500",
+    "alternativeId": null
   },
   {
     "id": "10",
@@ -77,7 +86,8 @@
     "category": "Data Structure",
     "difficulty": "Easy",
     "description": "Store key-value pairs for O(1) average time complexity for insert, delete, and lookup operations.",
-    "color": "from-fuchsia-500 to-pink-500"
+    "color": "from-fuchsia-500 to-pink-500",
+    "alternativeId": null
   },
   {
     "id": "11",
@@ -85,7 +95,8 @@
     "category": "Tree",
     "difficulty": "Medium",
     "description": "Traverse binary trees using inorder, preorder, or postorder traversal methods.",
-    "color": "from-indigo-500 to-blue-500"
+    "color": "from-indigo-500 to-blue-500",
+    "alternativeId": null
   },
   {
     "id": "12",
@@ -93,6 +104,7 @@
     "category": "Recursion",
     "difficulty": "Hard",
     "description": "Build solutions incrementally and abandon partial solutions that cannot lead to valid solutions.",
-    "color": "from-rose-500 to-red-500"
+    "color": "from-rose-500 to-red-500",
+    "alternativeId": null
   }
 ]

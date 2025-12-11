@@ -22,66 +22,244 @@
   "messages": {
     "noResults": "No se encontraron algoritmos con los filtros seleccionados."
   },
+  "algorithmDetail": {
+    "notFound": "Algoritmo no encontrado",
+    "backToHome": "Volver al inicio",
+    "description": "Descripción",
+    "explanation": "Explicación",
+    "useCases": "Casos de uso",
+    "exercises": "Ejercicios Prácticos",
+    "alternative": "Algoritmo alternativo",
+    "alternativeDescription": "Si este algoritmo no se ajusta a tus necesidades, considera esta alternativa:"
+  },
   "algorithms": {
     "1": {
       "name": "Búsqueda Binaria",
       "category": "Búsqueda",
-      "description": "Busca eficientemente un elemento en un array ordenado dividiendo repetidamente el intervalo de búsqueda por la mitad."
+      "description": "Busca eficientemente un elemento en un array ordenado dividiendo repetidamente el intervalo de búsqueda por la mitad.",
+      "explanation": "La búsqueda binaria es un algoritmo de búsqueda eficiente que funciona dividiendo repetidamente el espacio de búsqueda por la mitad. Compara el elemento objetivo con el elemento del medio del array. Si son iguales, la búsqueda termina. Si el objetivo es menor, busca en la mitad izquierda; si es mayor, busca en la mitad derecha. Este proceso continúa hasta encontrar el elemento o determinar que no existe.",
+      "useCases": [
+        "Búsqueda de elementos en arrays ordenados grandes",
+        "Implementación de estructuras de datos como árboles binarios de búsqueda",
+        "Búsqueda en bases de datos indexadas",
+        "Encontrar el punto de inserción en arrays ordenados",
+        "Búsqueda de rangos en datos ordenados"
+      ],
+      "exercises": [
+        "Búsqueda en lista ordenada: Dado un array ordenado de 1,000,000 elementos y un valor objetivo, encuentra su índice en O(log n) usando búsqueda binaria (ideal cuando la búsqueda lineal O(n) sería demasiado lenta).",
+        "Búsqueda de rango: En un array ordenado de números enteros, encuentra el primer y último índice de un valor objetivo usando búsqueda binaria (ideal para datos ordenados grandes).",
+        "Búsqueda en array rotado: Dado un array ordenado rotado [5, 6, 7, 1, 2, 3, 4], encuentra el elemento mínimo usando búsqueda binaria modificada (ideal para arrays parcialmente ordenados).",
+        "Búsqueda de inserción: Encuentra la posición correcta para insertar un elemento en un array ordenado manteniendo el orden, usando búsqueda binaria (ideal para mantener estructuras ordenadas eficientemente)."
+      ]
     },
     "2": {
       "name": "Quick Sort",
       "category": "Ordenamiento",
-      "description": "Algoritmo divide y vencerás que elige un pivote y particiona el array alrededor de él."
+      "description": "Algoritmo divide y vencerás que elige un pivote y particiona el array alrededor de él.",
+      "explanation": "Quick Sort es un algoritmo de ordenamiento eficiente que utiliza el enfoque divide y vencerás. Selecciona un elemento como pivote y particiona el array de manera que todos los elementos menores que el pivote estén a su izquierda y los mayores a su derecha. Luego ordena recursivamente las dos subarrays. Es muy eficiente en promedio, con complejidad O(n log n), pero puede degradarse a O(n²) en el peor caso.",
+      "useCases": [
+        "Ordenamiento de arrays grandes en memoria",
+        "Cuando se necesita ordenamiento in-place (sin memoria adicional)",
+        "Aplicaciones donde el rendimiento promedio es más importante que el peor caso",
+        "Ordenamiento de datos en aplicaciones de tiempo real",
+        "Implementación de sistemas de ordenamiento generales"
+      ],
+      "exercises": [
+        "Ordenamiento in-place: Ordena un array de 10,000 elementos en memoria usando Quick Sort sin usar espacio adicional O(n) (ideal cuando la memoria es limitada y necesitas ordenamiento eficiente).",
+        "Quickselect: Encuentra el k-ésimo elemento más pequeño en un array sin ordenar usando la lógica de partición de Quick Sort en tiempo promedio O(n) (ideal para encontrar estadísticas de orden sin ordenar todo).",
+        "Ordenamiento de datos grandes: Ordena un array de 1,000,000 de enteros usando Quick Sort, optimizando la elección del pivote para evitar el peor caso O(n²) (ideal para grandes volúmenes de datos en memoria).",
+        "Ordenamiento de objetos: Ordena una lista de 50,000 registros de estudiantes por múltiples criterios (primero por calificación descendente, luego por nombre) usando Quick Sort (ideal para ordenamiento rápido de objetos complejos)."
+      ]
     },
     "3": {
       "name": "Merge Sort",
       "category": "Ordenamiento",
-      "description": "Algoritmo divide y vencerás que divide el array en mitades y las fusiona en orden."
+      "description": "Algoritmo divide y vencerás que divide el array en mitades y las fusiona en orden.",
+      "explanation": "Merge Sort es un algoritmo de ordenamiento estable que divide el array en dos mitades, ordena cada mitad recursivamente y luego fusiona las dos mitades ordenadas. Tiene una complejidad de tiempo garantizada de O(n log n) en todos los casos, lo que lo hace predecible. Sin embargo, requiere espacio adicional O(n) para la operación de fusión.",
+      "useCases": [
+        "Cuando se necesita un ordenamiento estable (mantiene el orden relativo de elementos iguales)",
+        "Ordenamiento de listas enlazadas",
+        "Cuando se requiere garantía de rendimiento O(n log n)",
+        "Ordenamiento externo de archivos grandes",
+        "Aplicaciones donde la estabilidad es importante"
+      ],
+      "exercises": [
+        "Ordenamiento estable: Ordena un array de 100,000 registros manteniendo el orden relativo de elementos iguales usando Merge Sort (ideal cuando la estabilidad es crítica, como en ordenamiento de objetos con múltiples campos).",
+        "Ordenamiento externo: Ordena un archivo de 10 GB dividiéndolo en chunks, ordenando cada chunk con Merge Sort y luego fusionándolos (ideal para datos que no caben en memoria).",
+        "Conteo de inversiones: Cuenta el número de inversiones en un array usando Merge Sort modificado en O(n log n) (ideal para problemas que requieren comparar elementos durante el ordenamiento).",
+        "Ordenamiento de listas enlazadas: Ordena una lista enlazada de 50,000 nodos usando Merge Sort con O(1) espacio adicional (ideal para estructuras de datos donde el acceso aleatorio es costoso)."
+      ]
     },
     "4": {
       "name": "Búsqueda en Amplitud (BFS)",
       "category": "Grafos",
-      "description": "Recorre un grafo nivel por nivel, explorando todos los vecinos antes de pasar al siguiente nivel."
+      "description": "Recorre un grafo nivel por nivel, explorando todos los vecinos antes de pasar al siguiente nivel.",
+      "explanation": "BFS es un algoritmo de recorrido de grafos que explora todos los nodos a una distancia k antes de explorar nodos a distancia k+1. Utiliza una cola para mantener el orden de exploración. BFS garantiza encontrar el camino más corto en grafos no ponderados y es útil para encontrar el nivel más bajo de un árbol o la distancia mínima entre dos nodos.",
+      "useCases": [
+        "Encontrar el camino más corto en grafos no ponderados",
+        "Navegación por niveles en árboles",
+        "Búsqueda de nodos a una distancia específica",
+        "Verificación de conectividad en grafos",
+        "Resolución de problemas de laberintos y puzzles"
+      ],
+      "exercises": [
+        "Camino más corto en grafo no ponderado: Encuentra el camino más corto desde el nodo A al nodo Z en un grafo no dirigido usando BFS (ideal cuando todos los arcos tienen el mismo peso, garantiza el camino mínimo).",
+        "Navegación por niveles: Encuentra todos los nodos a distancia exacta k de un nodo fuente en un árbol usando BFS (ideal para explorar por niveles, como en árboles de decisión o jerarquías).",
+        "Laberinto con camino mínimo: Dado un laberinto 100x100 representado como matriz, encuentra el camino más corto desde la entrada hasta la salida usando BFS (ideal para problemas de grid donde cada movimiento tiene el mismo costo).",
+        "Conectividad en red social: Determina si dos usuarios están conectados en una red social (grafo no dirigido) y encuentra el grado de separación usando BFS (ideal para grafos no ponderados donde importa la distancia en pasos)."
+      ]
     },
     "5": {
       "name": "Búsqueda en Profundidad (DFS)",
       "category": "Grafos",
-      "description": "Recorre un grafo yendo lo más profundo posible antes de retroceder."
+      "description": "Recorre un grafo yendo lo más profundo posible antes de retroceder.",
+      "explanation": "DFS es un algoritmo de recorrido de grafos que explora tan profundo como sea posible a lo largo de cada rama antes de retroceder. Utiliza una pila (recursión o pila explícita) para mantener el orden de exploración. DFS es útil para detectar ciclos, realizar ordenamiento topológico, y explorar todas las posibilidades en problemas de backtracking.",
+      "useCases": [
+        "Detectar ciclos en grafos",
+        "Ordenamiento topológico",
+        "Encontrar componentes fuertemente conexos",
+        "Resolver problemas de backtracking",
+        "Explorar todas las rutas posibles en un grafo"
+      ],
+      "exercises": [
+        "Detección de ciclos: Detecta si un grafo dirigido contiene un ciclo usando DFS con marcado de colores (blanco/gris/negro) en O(V+E) (ideal para validar grafos acíclicos antes de procesamiento).",
+        "Ordenamiento topológico: Ordena las tareas de un proyecto con dependencias (DAG) usando DFS para encontrar un orden válido de ejecución (ideal para problemas de scheduling con restricciones).",
+        "Exploración exhaustiva: Encuentra todos los caminos posibles desde el nodo inicio al nodo fin en un grafo usando DFS recursivo (ideal cuando necesitas explorar todas las posibilidades, como en backtracking).",
+        "Componentes conexos: Encuentra el número de componentes conexos en un grafo no dirigido usando DFS (ideal para analizar la conectividad de una red o identificar grupos aislados)."
+      ]
     },
     "6": {
       "name": "Algoritmo de Dijkstra",
       "category": "Grafos",
-      "description": "Encuentra el camino más corto desde un vértice fuente a todos los demás vértices en un grafo ponderado."
+      "description": "Encuentra el camino más corto desde un vértice fuente a todos los demás vértices en un grafo ponderado.",
+      "explanation": "El algoritmo de Dijkstra encuentra los caminos más cortos desde un vértice fuente a todos los demás vértices en un grafo con pesos no negativos. Utiliza una cola de prioridad para seleccionar siempre el vértice con la distancia más corta conocida. Es eficiente con complejidad O((V + E) log V) usando un heap binario, donde V es el número de vértices y E el número de aristas.",
+      "useCases": [
+        "Sistemas de navegación GPS y mapas",
+        "Enrutamiento en redes de computadoras",
+        "Planificación de rutas en logística",
+        "Optimización de redes de transporte",
+        "Encontrar caminos mínimos en grafos con pesos no negativos"
+      ],
+      "exercises": [
+        "Navegación GPS: Encuentra la ruta más corta entre dos ciudades en un mapa con distancias de carreteras usando Dijkstra (ideal para grafos con pesos no negativos, como distancias o costos).",
+        "Red de enrutamiento: Calcula las distancias más cortas desde un servidor central a todos los servidores en una red de computadoras con latencias usando Dijkstra (ideal para optimización de rutas en redes).",
+        "Sistema de logística: Encuentra la ruta más corta para entregar un paquete desde un almacén a múltiples destinos usando Dijkstra (ideal cuando los pesos representan tiempo o costo y son no negativos).",
+        "Camino completo: Modifica Dijkstra para encontrar no solo la distancia más corta, sino también reconstruir el camino completo desde el origen hasta cada destino (ideal para aplicaciones que necesitan mostrar la ruta)."
+      ]
     },
     "7": {
       "name": "Dos Punteros",
       "category": "Arrays",
-      "description": "Usa dos punteros para recorrer un array desde diferentes posiciones simultáneamente."
+      "description": "Usa dos punteros para recorrer un array desde diferentes posiciones simultáneamente.",
+      "explanation": "La técnica de dos punteros utiliza dos punteros que se mueven a través de un array en diferentes direcciones o velocidades. Es especialmente útil para arrays ordenados y puede reducir la complejidad de tiempo de O(n²) a O(n). Los punteros pueden moverse hacia adentro (desde los extremos), hacia afuera, o a diferentes velocidades.",
+      "useCases": [
+        "Encontrar pares en arrays ordenados que sumen un valor objetivo",
+        "Invertir arrays o strings",
+        "Detectar palíndromos",
+        "Eliminar duplicados en arrays ordenados",
+        "Encontrar el contenedor con más agua o problemas similares"
+      ],
+      "exercises": [
+        "Suma de pares en array ordenado: Dado un array ordenado de 10,000 elementos y un objetivo, encuentra todos los pares que suman el objetivo usando dos punteros en O(n) (ideal cuando el array está ordenado, evita O(n²) de fuerza bruta).",
+        "Inversión eficiente: Invierte un array o string in-place usando dos punteros sin espacio adicional O(1) (ideal para operaciones de reversión en estructuras lineales).",
+        "Validación de palíndromo: Verifica si un string de 100,000 caracteres es palíndromo usando dos punteros desde ambos extremos en O(n) (ideal para validación eficiente sin crear copias).",
+        "Eliminación de duplicados: Elimina duplicados de un array ordenado in-place usando dos punteros (uno para lectura, otro para escritura) en O(n) tiempo y O(1) espacio (ideal para optimizar espacio en arrays ordenados)."
+      ]
     },
     "8": {
       "name": "Ventana Deslizante",
       "category": "Arrays",
-      "description": "Mantiene una ventana de elementos y la desliza a través del array para resolver problemas de subarrays."
+      "description": "Mantiene una ventana de elementos y la desliza a través del array para resolver problemas de subarrays.",
+      "explanation": "La técnica de ventana deslizante mantiene una ventana de tamaño fijo o variable que se desliza a través del array. En lugar de recalcular todo para cada ventana, actualiza eficientemente la ventana agregando y eliminando elementos. Esto reduce la complejidad de O(n²) o O(n³) a O(n) para muchos problemas de subarrays.",
+      "useCases": [
+        "Encontrar el subarray más largo con k elementos únicos",
+        "Calcular promedios de subarrays de tamaño fijo",
+        "Encontrar el substring más largo sin caracteres repetidos",
+        "Problemas de máximo/mínimo en ventanas de tamaño fijo",
+        "Análisis de secuencias de datos en tiempo real"
+      ],
+      "exercises": [
+        "Subarray con k elementos únicos: Encuentra el subarray más largo con exactamente k elementos únicos en un array de 100,000 elementos usando ventana deslizante en O(n) (ideal cuando necesitas mantener un conjunto de elementos dentro de una ventana).",
+        "Promedio máximo en ventana fija: Dado un array de calificaciones y una ventana de tamaño k, encuentra el subarray de tamaño k con el promedio máximo usando ventana deslizante en O(n) (ideal para análisis de datos en ventanas fijas sin recalcular todo).",
+        "Substring sin repetición: Encuentra la longitud del substring más largo sin caracteres repetidos en un string de 1,000,000 caracteres usando ventana deslizante en O(n) (ideal para problemas de substrings con restricciones de unicidad).",
+        "Suma máxima en ventana: Encuentra la suma máxima de cualquier subarray de tamaño k en un array de 50,000 elementos usando ventana deslizante en O(n) (ideal para optimizar cálculos repetitivos en ventanas deslizantes)."
+      ]
     },
     "9": {
       "name": "Programación Dinámica",
       "category": "Optimización",
-      "description": "Resuelve problemas complejos dividiéndolos en subproblemas más simples y almacenando resultados."
+      "description": "Resuelve problemas complejos dividiéndolos en subproblemas más simples y almacenando resultados.",
+      "explanation": "La programación dinámica es un método para resolver problemas complejos dividiéndolos en subproblemas más simples y almacenando los resultados de estos subproblemas para evitar recalcularlos. Funciona mejor cuando un problema tiene subproblemas superpuestos y una estructura óptima (la solución óptima contiene soluciones óptimas de subproblemas). Puede implementarse de forma top-down (memoización) o bottom-up (tabulación).",
+      "useCases": [
+        "Problemas de optimización con subproblemas superpuestos",
+        "Secuencias y subsecuencias (Fibonacci, LCS, LIS)",
+        "Problemas de mochila y optimización de recursos",
+        "Caminos únicos y problemas de rutas",
+        "Problemas de partición y división"
+      ],
+      "exercises": [
+        "Fibonacci optimizado: Calcula el número de Fibonacci F(1000) usando programación dinámica con memoización, evitando recalcular los mismos subproblemas (ideal cuando hay subproblemas superpuestos que se repiten muchas veces).",
+        "Subsecuencia común más larga: Encuentra la LCS entre dos strings de 10,000 caracteres usando DP con tabulación en O(n*m) (ideal para problemas de alineación de secuencias con subproblemas superpuestos).",
+        "Problema de la mochila: Optimiza el valor de items en una mochila con capacidad limitada usando DP, donde cada subproblema (capacidad, items) se resuelve una vez (ideal para problemas de optimización con restricciones y subproblemas superpuestos).",
+        "Caminos únicos en grid: Encuentra el número de caminos únicos en una cuadrícula 100x100 con obstáculos usando DP, almacenando resultados de subproblemas (ideal cuando el mismo subproblema se calcula múltiples veces en recursión)."
+      ]
     },
     "10": {
       "name": "Tabla Hash",
       "category": "Estructura de Datos",
-      "description": "Almacena pares clave-valor para complejidad temporal O(1) promedio en operaciones de inserción, eliminación y búsqueda."
+      "description": "Almacena pares clave-valor para complejidad temporal O(1) promedio en operaciones de inserción, eliminación y búsqueda.",
+      "explanation": "Una tabla hash es una estructura de datos que implementa un array asociativo, mapeando claves a valores. Utiliza una función hash para calcular un índice donde se almacena o recupera un valor. Proporciona acceso promedio O(1) para búsqueda, inserción y eliminación. Las colisiones (cuando dos claves tienen el mismo hash) se manejan mediante encadenamiento o direccionamiento abierto.",
+      "useCases": [
+        "Implementación de diccionarios y mapas",
+        "Búsqueda rápida de elementos",
+        "Conteo de frecuencias de elementos",
+        "Detección de duplicados",
+        "Caché y sistemas de indexación"
+      ],
+      "exercises": [
+        "Búsqueda rápida de contactos: Implementa un directorio telefónico con 1,000,000 de contactos usando tabla hash para búsqueda O(1) promedio (ideal cuando necesitas acceso rápido por clave sin ordenamiento).",
+        "Detección de duplicados: Encuentra todos los elementos duplicados en un array de 100,000 elementos usando tabla hash en O(n) (ideal para conteo y detección de elementos únicos sin ordenar).",
+        "Intersección eficiente: Encuentra la intersección de dos arrays de 50,000 elementos cada uno usando tabla hash en O(n+m) en lugar de O(n*m) (ideal para optimizar operaciones de conjunto en grandes volúmenes).",
+        "Caché de alta frecuencia: Implementa un caché LRU para 10,000 elementos usando tabla hash + lista doblemente enlazada para operaciones O(1) (ideal cuando necesitas acceso rápido y gestión eficiente de capacidad)."
+      ]
     },
     "11": {
       "name": "Recorrido de Árbol Binario",
       "category": "Árboles",
-      "description": "Recorre árboles binarios usando métodos de recorrido inorder, preorder o postorder."
+      "description": "Recorre árboles binarios usando métodos de recorrido inorder, preorder o postorder.",
+      "explanation": "El recorrido de árboles binarios visita cada nodo exactamente una vez. Hay tres métodos principales: Preorder (raíz, izquierda, derecha) - útil para copiar árboles; Inorder (izquierda, raíz, derecha) - produce valores ordenados en BST; Postorder (izquierda, derecha, raíz) - útil para eliminar árboles. Estos recorridos pueden implementarse recursivamente o iterativamente usando pilas.",
+      "useCases": [
+        "Evaluación de expresiones matemáticas",
+        "Construcción y copia de árboles",
+        "Serialización y deserialización de árboles",
+        "Análisis sintáctico y compiladores",
+        "Operaciones en árboles de expresión"
+      ],
+      "exercises": [
+        "Evaluación de expresiones: Evalúa un árbol de expresión matemática con 1000 nodos usando recorrido postorder (ideal para procesar operadores después de operandos, como en notación polaca inversa).",
+        "Construcción de árbol: Reconstruye un árbol binario a partir de sus recorridos preorder e inorder usando recursión (ideal cuando necesitas recrear la estructura del árbol desde sus representaciones lineales).",
+        "Serialización de árbol: Serializa un árbol binario de 10,000 nodos a string y deserializa usando recorrido preorder (ideal para almacenar y transmitir estructuras de árbol de forma compacta).",
+        "Copia de árbol: Copia un árbol binario completo usando recorrido preorder para crear nodos antes de procesar hijos (ideal para duplicar estructuras de árbol manteniendo la misma forma)."
+      ]
     },
     "12": {
       "name": "Retroceso",
       "category": "Recursión",
-      "description": "Construye soluciones incrementalmente y abandona soluciones parciales que no pueden llevar a soluciones válidas."
+      "description": "Construye soluciones incrementalmente y abandona soluciones parciales que no pueden llevar a soluciones válidas.",
+      "explanation": "Backtracking es una técnica algorítmica para resolver problemas de manera incremental, construyendo candidatos a soluciones y abandonando un candidato (haciendo 'backtrack') tan pronto como se determina que no puede completarse en una solución válida. Es especialmente útil para problemas de decisión, optimización y enumeración donde se necesita explorar todas las posibilidades.",
+      "useCases": [
+        "Resolver puzzles como Sudoku y N-Queens",
+        "Generar todas las permutaciones y combinaciones",
+        "Problemas de laberintos y rutas",
+        "Asignación de recursos con restricciones",
+        "Problemas de satisfacción de restricciones"
+      ],
+      "exercises": [
+        "Problema N-Reinas: Coloca N reinas en un tablero NxN sin que se ataquen usando backtracking, abandonando configuraciones inválidas tempranamente (ideal cuando necesitas explorar todas las soluciones válidas y descartar inválidas rápidamente).",
+        "Generación de permutaciones: Genera todas las permutaciones de un array de N elementos usando backtracking, construyendo soluciones incrementalmente (ideal para problemas combinatorios donde necesitas explorar todas las posibilidades).",
+        "Resolución de Sudoku: Resuelve un Sudoku 9x9 usando backtracking, validando cada número antes de continuar y retrocediendo cuando no hay solución (ideal para problemas de satisfacción de restricciones con muchas variables).",
+        "Camino en laberinto: Encuentra un camino desde inicio hasta fin en un laberinto usando backtracking, marcando y desmarcando celdas visitadas (ideal para problemas de exploración donde necesitas probar múltiples rutas y retroceder si fallan)."
+      ]
     }
   },
   "categories": {

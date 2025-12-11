@@ -22,66 +22,244 @@
   "messages": {
     "noResults": "No algorithms found with the selected filters."
   },
+  "algorithmDetail": {
+    "notFound": "Algorithm not found",
+    "backToHome": "Back to home",
+    "description": "Description",
+    "explanation": "Explanation",
+    "useCases": "Use Cases",
+    "exercises": "Practical Exercises",
+    "alternative": "Alternative Algorithm",
+    "alternativeDescription": "If this algorithm doesn't fit your needs, consider this alternative:"
+  },
   "algorithms": {
     "1": {
       "name": "Binary Search",
       "category": "Search",
-      "description": "Efficiently search for an element in a sorted array by repeatedly dividing the search interval in half."
+      "description": "Efficiently search for an element in a sorted array by repeatedly dividing the search interval in half.",
+      "explanation": "Binary search is an efficient search algorithm that works by repeatedly dividing the search space in half. It compares the target element with the middle element of the array. If they are equal, the search ends. If the target is smaller, it searches the left half; if larger, it searches the right half. This process continues until the element is found or determined not to exist.",
+      "useCases": [
+        "Searching for elements in large sorted arrays",
+        "Implementing data structures like binary search trees",
+        "Searching in indexed databases",
+        "Finding insertion points in sorted arrays",
+        "Range searching in sorted data"
+      ],
+      "exercises": [
+        "Search in sorted list: Given a sorted array of 1,000,000 elements and a target value, find its index in O(log n) using binary search (ideal when linear search O(n) would be too slow).",
+        "Range search: In a sorted array of integers, find the first and last index of a target value using binary search (ideal for large sorted data).",
+        "Search in rotated array: Given a rotated sorted array [5, 6, 7, 1, 2, 3, 4], find the minimum element using modified binary search (ideal for partially sorted arrays).",
+        "Insertion search: Find the correct position to insert an element in a sorted array while maintaining order, using binary search (ideal for efficiently maintaining sorted structures)."
+      ]
     },
     "2": {
       "name": "Quick Sort",
       "category": "Sorting",
-      "description": "Divide and conquer algorithm that picks a pivot and partitions the array around it."
+      "description": "Divide and conquer algorithm that picks a pivot and partitions the array around it.",
+      "explanation": "Quick Sort is an efficient sorting algorithm that uses the divide and conquer approach. It selects an element as a pivot and partitions the array so that all elements smaller than the pivot are to its left and all larger elements are to its right. It then recursively sorts the two subarrays. It's very efficient on average with O(n log n) complexity, but can degrade to O(n²) in the worst case.",
+      "useCases": [
+        "Sorting large arrays in memory",
+        "When in-place sorting is needed (no additional memory)",
+        "Applications where average performance is more important than worst case",
+        "Sorting data in real-time applications",
+        "Implementing general-purpose sorting systems"
+      ],
+      "exercises": [
+        "In-place sorting: Sort an array of 10,000 elements in memory using Quick Sort without using O(n) additional space (ideal when memory is limited and you need efficient sorting).",
+        "Quickselect: Find the k-th smallest element in an unsorted array using Quick Sort's partition logic in average O(n) time (ideal for finding order statistics without sorting everything).",
+        "Large data sorting: Sort an array of 1,000,000 integers using Quick Sort, optimizing pivot selection to avoid worst case O(n²) (ideal for large volumes of in-memory data).",
+        "Object sorting: Sort a list of 50,000 student records by multiple criteria (first by grade descending, then by name) using Quick Sort (ideal for fast sorting of complex objects)."
+      ]
     },
     "3": {
       "name": "Merge Sort",
       "category": "Sorting",
-      "description": "Divide and conquer algorithm that divides the array into halves and merges them in sorted order."
+      "description": "Divide and conquer algorithm that divides the array into halves and merges them in sorted order.",
+      "explanation": "Merge Sort is a stable sorting algorithm that divides the array into two halves, sorts each half recursively, and then merges the two sorted halves. It has a guaranteed time complexity of O(n log n) in all cases, making it predictable. However, it requires additional O(n) space for the merge operation.",
+      "useCases": [
+        "When stable sorting is needed (maintains relative order of equal elements)",
+        "Sorting linked lists",
+        "When guaranteed O(n log n) performance is required",
+        "External sorting of large files",
+        "Applications where stability is important"
+      ],
+      "exercises": [
+        "Stable sorting: Sort an array of 100,000 records maintaining the relative order of equal elements using Merge Sort (ideal when stability is critical, like sorting objects with multiple fields).",
+        "External sorting: Sort a 10 GB file by dividing it into chunks, sorting each chunk with Merge Sort and then merging them (ideal for data that doesn't fit in memory).",
+        "Inversion counting: Count the number of inversions in an array using modified Merge Sort in O(n log n) (ideal for problems requiring element comparison during sorting).",
+        "Linked list sorting: Sort a linked list of 50,000 nodes using Merge Sort with O(1) additional space (ideal for data structures where random access is expensive)."
+      ]
     },
     "4": {
       "name": "Breadth-First Search (BFS)",
       "category": "Graph",
-      "description": "Traverse a graph level by level, exploring all neighbors before moving to the next level."
+      "description": "Traverse a graph level by level, exploring all neighbors before moving to the next level.",
+      "explanation": "BFS is a graph traversal algorithm that explores all nodes at distance k before exploring nodes at distance k+1. It uses a queue to maintain the order of exploration. BFS guarantees finding the shortest path in unweighted graphs and is useful for finding the lowest level of a tree or the minimum distance between two nodes.",
+      "useCases": [
+        "Finding shortest path in unweighted graphs",
+        "Level-order traversal in trees",
+        "Finding nodes at a specific distance",
+        "Checking connectivity in graphs",
+        "Solving maze and puzzle problems"
+      ],
+      "exercises": [
+        "Shortest path in unweighted graph: Find the shortest path from node A to node Z in an undirected graph using BFS (ideal when all edges have the same weight, guarantees minimum path).",
+        "Level navigation: Find all nodes at exact distance k from a source node in a tree using BFS (ideal for exploring by levels, like in decision trees or hierarchies).",
+        "Maze with minimum path: Given a 100x100 maze represented as a matrix, find the shortest path from entrance to exit using BFS (ideal for grid problems where each move has the same cost).",
+        "Social network connectivity: Determine if two users are connected in a social network (undirected graph) and find the degree of separation using BFS (ideal for unweighted graphs where step distance matters)."
+      ]
     },
     "5": {
       "name": "Depth-First Search (DFS)",
       "category": "Graph",
-      "description": "Traverse a graph by going as deep as possible before backtracking."
+      "description": "Traverse a graph by going as deep as possible before backtracking.",
+      "explanation": "DFS is a graph traversal algorithm that explores as deep as possible along each branch before backtracking. It uses a stack (recursion or explicit stack) to maintain the order of exploration. DFS is useful for detecting cycles, performing topological sorting, and exploring all possibilities in backtracking problems.",
+      "useCases": [
+        "Detecting cycles in graphs",
+        "Topological sorting",
+        "Finding strongly connected components",
+        "Solving backtracking problems",
+        "Exploring all possible paths in a graph"
+      ],
+      "exercises": [
+        "Cycle detection: Detect if a directed graph contains a cycle using DFS with color marking (white/gray/black) in O(V+E) (ideal for validating acyclic graphs before processing).",
+        "Topological sorting: Sort project tasks with dependencies (DAG) using DFS to find a valid execution order (ideal for scheduling problems with constraints).",
+        "Exhaustive exploration: Find all possible paths from start node to end node in a graph using recursive DFS (ideal when you need to explore all possibilities, like in backtracking).",
+        "Connected components: Find the number of connected components in an undirected graph using DFS (ideal for analyzing network connectivity or identifying isolated groups)."
+      ]
     },
     "6": {
       "name": "Dijkstra's Algorithm",
       "category": "Graph",
-      "description": "Find the shortest path from a source vertex to all other vertices in a weighted graph."
+      "description": "Find the shortest path from a source vertex to all other vertices in a weighted graph.",
+      "explanation": "Dijkstra's algorithm finds the shortest paths from a source vertex to all other vertices in a graph with non-negative weights. It uses a priority queue to always select the vertex with the shortest known distance. It's efficient with O((V + E) log V) complexity using a binary heap, where V is the number of vertices and E is the number of edges.",
+      "useCases": [
+        "GPS navigation systems and maps",
+        "Routing in computer networks",
+        "Route planning in logistics",
+        "Transportation network optimization",
+        "Finding shortest paths in graphs with non-negative weights"
+      ],
+      "exercises": [
+        "GPS navigation: Find the shortest route between two cities on a map with road distances using Dijkstra (ideal for graphs with non-negative weights, like distances or costs).",
+        "Network routing: Calculate shortest distances from a central server to all servers in a computer network with latencies using Dijkstra (ideal for route optimization in networks).",
+        "Logistics system: Find the shortest route to deliver a package from a warehouse to multiple destinations using Dijkstra (ideal when weights represent time or cost and are non-negative).",
+        "Complete path: Modify Dijkstra to find not only the shortest distance but also reconstruct the complete path from origin to each destination (ideal for applications that need to show the route)."
+      ]
     },
     "7": {
       "name": "Two Pointers",
       "category": "Array",
-      "description": "Use two pointers to traverse an array from different positions simultaneously."
+      "description": "Use two pointers to traverse an array from different positions simultaneously.",
+      "explanation": "The two pointers technique uses two pointers that move through an array in different directions or speeds. It's especially useful for sorted arrays and can reduce time complexity from O(n²) to O(n). The pointers can move inward (from ends), outward, or at different speeds.",
+      "useCases": [
+        "Finding pairs in sorted arrays that sum to a target value",
+        "Reversing arrays or strings",
+        "Detecting palindromes",
+        "Removing duplicates in sorted arrays",
+        "Finding container with most water or similar problems"
+      ],
+      "exercises": [
+        "Pair sum in sorted array: Given a sorted array of 10,000 elements and a target, find all pairs that sum to the target using two pointers in O(n) (ideal when array is sorted, avoids O(n²) brute force).",
+        "Efficient reversal: Reverse an array or string in-place using two pointers without O(1) additional space (ideal for reversal operations on linear structures).",
+        "Palindrome validation: Check if a string of 100,000 characters is palindrome using two pointers from both ends in O(n) (ideal for efficient validation without creating copies).",
+        "Duplicate removal: Remove duplicates from a sorted array in-place using two pointers (one for reading, one for writing) in O(n) time and O(1) space (ideal for space optimization in sorted arrays)."
+      ]
     },
     "8": {
       "name": "Sliding Window",
       "category": "Array",
-      "description": "Maintain a window of elements and slide it across the array to solve subarray problems."
+      "description": "Maintain a window of elements and slide it across the array to solve subarray problems.",
+      "explanation": "The sliding window technique maintains a fixed or variable-sized window that slides through the array. Instead of recalculating everything for each window, it efficiently updates the window by adding and removing elements. This reduces complexity from O(n²) or O(n³) to O(n) for many subarray problems.",
+      "useCases": [
+        "Finding longest subarray with k unique elements",
+        "Calculating averages of fixed-size subarrays",
+        "Finding longest substring without repeating characters",
+        "Maximum/minimum problems in fixed-size windows",
+        "Real-time data sequence analysis"
+      ],
+      "exercises": [
+        "Subarray with k unique elements: Find the longest subarray with exactly k unique elements in an array of 100,000 elements using sliding window in O(n) (ideal when you need to maintain a set of elements within a window).",
+        "Maximum average in fixed window: Given an array of grades and a window of size k, find the subarray of size k with maximum average using sliding window in O(n) (ideal for data analysis in fixed windows without recalculating everything).",
+        "Substring without repetition: Find the length of the longest substring without repeating characters in a string of 1,000,000 characters using sliding window in O(n) (ideal for substring problems with uniqueness constraints).",
+        "Maximum sum in window: Find the maximum sum of any subarray of size k in an array of 50,000 elements using sliding window in O(n) (ideal for optimizing repetitive calculations in sliding windows)."
+      ]
     },
     "9": {
       "name": "Dynamic Programming",
       "category": "Optimization",
-      "description": "Solve complex problems by breaking them down into simpler subproblems and storing results."
+      "description": "Solve complex problems by breaking them down into simpler subproblems and storing results.",
+      "explanation": "Dynamic programming is a method for solving complex problems by breaking them down into simpler subproblems and storing the results of these subproblems to avoid recalculating them. It works best when a problem has overlapping subproblems and optimal substructure (the optimal solution contains optimal solutions to subproblems). It can be implemented top-down (memoization) or bottom-up (tabulation).",
+      "useCases": [
+        "Optimization problems with overlapping subproblems",
+        "Sequences and subsequences (Fibonacci, LCS, LIS)",
+        "Knapsack and resource optimization problems",
+        "Unique paths and route problems",
+        "Partition and division problems"
+      ],
+      "exercises": [
+        "Optimized Fibonacci: Calculate Fibonacci number F(1000) using dynamic programming with memoization, avoiding recalculating the same subproblems (ideal when there are overlapping subproblems that repeat many times).",
+        "Longest common subsequence: Find the LCS between two strings of 10,000 characters each using DP with tabulation in O(n*m) (ideal for sequence alignment problems with overlapping subproblems).",
+        "Knapsack problem: Optimize item value in a knapsack with limited capacity using DP, where each subproblem (capacity, items) is solved once (ideal for optimization problems with constraints and overlapping subproblems).",
+        "Unique paths in grid: Find the number of unique paths in a 100x100 grid with obstacles using DP, storing subproblem results (ideal when the same subproblem is calculated multiple times in recursion)."
+      ]
     },
     "10": {
       "name": "Hash Table",
       "category": "Data Structure",
-      "description": "Store key-value pairs for O(1) average time complexity for insert, delete, and lookup operations."
+      "description": "Store key-value pairs for O(1) average time complexity for insert, delete, and lookup operations.",
+      "explanation": "A hash table is a data structure that implements an associative array, mapping keys to values. It uses a hash function to calculate an index where a value is stored or retrieved. It provides average O(1) access for lookup, insertion, and deletion. Collisions (when two keys have the same hash) are handled through chaining or open addressing.",
+      "useCases": [
+        "Implementing dictionaries and maps",
+        "Fast element lookup",
+        "Counting element frequencies",
+        "Duplicate detection",
+        "Caching and indexing systems"
+      ],
+      "exercises": [
+        "Fast contact search: Implement a phone directory with 1,000,000 contacts using hash table for O(1) average lookup (ideal when you need fast access by key without sorting).",
+        "Duplicate detection: Find all duplicate elements in an array of 100,000 elements using hash table in O(n) (ideal for counting and detecting unique elements without sorting).",
+        "Efficient intersection: Find the intersection of two arrays of 50,000 elements each using hash table in O(n+m) instead of O(n*m) (ideal for optimizing set operations on large volumes).",
+        "High-frequency cache: Implement an LRU cache for 10,000 elements using hash table + doubly linked list for O(1) operations (ideal when you need fast access and efficient capacity management)."
+      ]
     },
     "11": {
       "name": "Binary Tree Traversal",
       "category": "Tree",
-      "description": "Traverse binary trees using inorder, preorder, or postorder traversal methods."
+      "description": "Traverse binary trees using inorder, preorder, or postorder traversal methods.",
+      "explanation": "Binary tree traversal visits each node exactly once. There are three main methods: Preorder (root, left, right) - useful for copying trees; Inorder (left, root, right) - produces sorted values in BST; Postorder (left, right, root) - useful for deleting trees. These traversals can be implemented recursively or iteratively using stacks.",
+      "useCases": [
+        "Evaluating mathematical expressions",
+        "Constructing and copying trees",
+        "Tree serialization and deserialization",
+        "Syntax parsing and compilers",
+        "Operations on expression trees"
+      ],
+      "exercises": [
+        "Expression evaluation: Evaluate a mathematical expression tree with 1000 nodes using postorder traversal (ideal for processing operators after operands, like in reverse Polish notation).",
+        "Tree construction: Reconstruct a binary tree from its preorder and inorder traversals using recursion (ideal when you need to recreate tree structure from linear representations).",
+        "Tree serialization: Serialize a binary tree of 10,000 nodes to string and deserialize using preorder traversal (ideal for storing and transmitting tree structures compactly).",
+        "Tree copying: Copy a complete binary tree using preorder traversal to create nodes before processing children (ideal for duplicating tree structures maintaining the same shape)."
+      ]
     },
     "12": {
       "name": "Backtracking",
       "category": "Recursion",
-      "description": "Build solutions incrementally and abandon partial solutions that cannot lead to valid solutions."
+      "description": "Build solutions incrementally and abandon partial solutions that cannot lead to valid solutions.",
+      "explanation": "Backtracking is an algorithmic technique for solving problems incrementally by building candidate solutions and abandoning a candidate (making a 'backtrack') as soon as it's determined that it cannot be completed to a valid solution. It's especially useful for decision, optimization, and enumeration problems where all possibilities need to be explored.",
+      "useCases": [
+        "Solving puzzles like Sudoku and N-Queens",
+        "Generating all permutations and combinations",
+        "Maze and path problems",
+        "Resource allocation with constraints",
+        "Constraint satisfaction problems"
+      ],
+      "exercises": [
+        "N-Queens problem: Place N queens on an NxN board without attacking each other using backtracking, abandoning invalid configurations early (ideal when you need to explore all valid solutions and discard invalid ones quickly).",
+        "Permutation generation: Generate all permutations of an array of N elements using backtracking, building solutions incrementally (ideal for combinatorial problems where you need to explore all possibilities).",
+        "Sudoku solving: Solve a 9x9 Sudoku using backtracking, validating each number before continuing and backtracking when no solution exists (ideal for constraint satisfaction problems with many variables).",
+        "Maze pathfinding: Find a path from start to end in a maze using backtracking, marking and unmarking visited cells (ideal for exploration problems where you need to try multiple routes and backtrack if they fail)."
+      ]
     }
   },
   "categories": {
